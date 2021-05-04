@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeLeaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>New Movie Rating</title>
+</head>
+<body>
+	<h2>New Movie Rating</h2>
+	<form action="#" th:action="@{/movies/new}" th:object="${movieRating}" method="post">
+	Movie title: <input type="text" th:field="*{movieTitle}"/> 
+		<span th:if="${#fields.hasErrors('movieTitle')}" th:errors="*{movieTitle}"> </span> <br/>
+	Movie Rating: <input type="number" th:field="*{movieRating}"/>
+	    <span th:if="${#fields.hasErrors('movieRating')}" th:errors="*{movieRating}"> </span> <br/> 
+	Rater's Name: <input type="text" th:field="*{ratersName}"/> 
+	    <span th:if="${#fields.hasErrors('ratersName')}" th:errors="*{ratersName}"> </span> <br/> 
+	<input type="submit" value="Submit"/>
+	</form>
+</body>
+</html>
