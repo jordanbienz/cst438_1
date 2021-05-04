@@ -14,6 +14,7 @@ public class MovieRatings {
 	@Autowired
 	MovieRatingRepository movieRatingRepository; 
 	
+	//This is a test
 	@GetMapping("/movies")
 	public String getAllMovieRatings(Model model) {
 		Iterable<MovieRating> movieRating = 
@@ -22,6 +23,7 @@ public class MovieRatings {
 		return "movie_ratings_list";
 	}	
 	
+	//This is a test
 	@PostMapping("/movies/new")
 	public String processMovieRatingForm(@Valid MovieRating movieRating,
 			BindingResult result,
@@ -34,6 +36,7 @@ public class MovieRatings {
 		return "redirect:/movies";
 	}
 	
+	//This is a test
 	@GetMapping("movies/new")
 	public String createMovieRating(Model model) {
 		MovieRating movieRating = new MovieRating();
