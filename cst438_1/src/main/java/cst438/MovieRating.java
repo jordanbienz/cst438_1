@@ -31,7 +31,11 @@ public class MovieRating {
 	private String creationDateTime;
 	
 	public MovieRating() {
-		
+		id = 0L;
+		movieTitle = "";
+		movieRating = 0;
+		ratersName = "";
+		creationDateTime = "";
 	}
 
 	public MovieRating(long id, String movieTitle, int movieRating,
